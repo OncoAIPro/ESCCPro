@@ -5,7 +5,7 @@
 
 ESCCPro provides surgery and postoperative adjuvant chemotherapy advice for patients with locally advanced esophageal squamous cell carcinoma to improve clinical management.
 
-*main.py:* Includes the entry function of ESBP and the code for training and validation.  
+*main.py:* Includes the entry function of ESCCPro and the code for training and validation.  
 
   > input_dir_train: The path where your training dataset is stored.
   > 
@@ -28,4 +28,4 @@ ESCCPro provides surgery and postoperative adjuvant chemotherapy advice for pati
  
 <div align=left><img width="1000" height="411" src="https://github.com/OncoAIPro/ESCCPro/blob/main/utils/Seg_Examples.jpg"/></div><br />
 
-**Fig. S1. Examples of the input images of ESCCPro. R1, R2, and R3 represent the manual segmentation from three different radiologists.**<br />
+**Fig. S1. Examples of the input PET/CT images of ESCCPro. R1, R2, and R3 represent the manual segmentation from three radiologists.**<br />
