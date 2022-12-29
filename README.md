@@ -26,6 +26,6 @@ ESCCPro provides surgery and postoperative adjuvant chemotherapy advice for pati
 *utils folder:* Necessary functions used in the ESCCPro.
 
  
-<div align=left><img width="1000" height="350" src="https://github.com/OncoAIPro/ESCCPro/blob/main/utils/Seg_Examples.jpg"/></div><br />
+<div align=left><img width="1000" height="360" src="https://github.com/OncoAIPro/ESCCPro/blob/main/utils/Seg_Examples.jpg"/></div><br />
 
 **Fig. S1. Examples of the input PET/CT images of ESCCPro. R1, R2, and R3 represent the manual segmentation from three radiologists.**<br />
