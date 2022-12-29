@@ -3,7 +3,7 @@
 [![standard-readme compliant](https://img.shields.io/badge/Readme-standard-brightgreen.svg?style=flat-square)](https://github.com/JD910/ESLN/blob/main/README.md)
 ![](https://img.shields.io/badge/Pytorch-1.7.1-brightgreen.svg?style=flat-square)
 
-ESCCPro provides surgery and postoperative adjuvant chemotherapy advice for patients with locally advanced esophageal squamous cell carcinoma to improve clinical management.
+ESCCPro predicts surgical and postoperative adjuvant chemotherapy outcomes for patients with esophageal squamous cell carcinoma to improve clinical management.
 
 *main.py:* Includes the entry function of ESCCPro and the code for training and validation.  
 
@@ -21,7 +21,7 @@ ESCCPro provides surgery and postoperative adjuvant chemotherapy advice for pati
   > keys[index]: The name of each image.
 
 
-*nets folder:* The definition of the ESCCPro network.
+*nets folder:* The definition of the ESCCPro network, including the three pooling functions. 
 
 *utils folder:* Necessary functions used in the ESCCPro.
 
