@@ -19,21 +19,21 @@ class H5Dataset(Dataset):
 
         with h5py.File(self.h5_path, 'r') as record:
             
-            CIFAR100_MEANS = (0.485, 0.456, 0.406) #precomputed channel means of CIFAR100(train) for normalization [0.485, 0.456, 0.406]
-            CIFAR100_STDS = (0.229, 0.224, 0.225) #precomputed standard deviations [0.229, 0.224, 0.225]
+            C_MEANS = (0.485, 0.456, 0.406) #precomputed channel means of (train) for normalization [0.485, 0.456, 0.406]
+            C_STDS = (0.229, 0.224, 0.225) #precomputed standard deviations [0.229, 0.224, 0.225]
     
             transformations = {
                 'train': transforms.Compose([
                     #transforms.ToPILImage(),
                     #transforms.RandomResizedCrop(224),
                     transforms.ToTensor(),
-                    transforms.Normalize(CIFAR100_MEANS, CIFAR100_STDS)
+                    transforms.Normalize(C_MEANS, C_STDS)
                 ]),
                 'val': transforms.Compose([
                     #transforms.ToPILImage(),
                     #transforms.CenterCrop(224),
                     transforms.ToTensor(),
-                    transforms.Normalize(CIFAR100_MEANS, CIFAR100_STDS)
+                    transforms.Normalize(C_MEANS, C_STDS)
                 ])
             }
             keys = list(record.keys())
