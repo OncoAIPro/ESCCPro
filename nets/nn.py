@@ -144,8 +144,22 @@ class EfficientNet2(torch.nn.Module):
         self.feature = torch.nn.Sequential(*feature)
         self.fc = torch.nn.Sequential(torch.nn.Dropout(0.5, True),
                                       torch.nn.Linear(filters[6], num_class))
+        ##Maxpooling
+        #self.maxpool = torch.nn.MaxPool2d(kernel_size=7, stride=1)
+        
+        ##Attention Pooling
+        #self.bottom_up_att = torch.nn.Conv2d(filters[6], 1, kernel_size=1, stride=1, bias=False)
+        #self.top_down_att = torch.nn.Conv2d(filters[6], num_class, kernel_size=1, stride=1, bias=False)
         
         #self.softmax = torch.nn.Softmax()
+        
+        ##Liner layer for better results
+        #self.net_linear = torch.nn.Sequential(
+        #    torch.nn.Linear(filters[6], 50),
+        #    torch.nn.LeakyReLU(),
+        #    torch.nn.Linear(50, 10),
+        #    torch.nn.LeakyReLU(),
+        #    torch.nn.Linear(10, num_class))
                                       
         torch.nn.Linear(filters[6], num_class)
 
@@ -155,6 +169,14 @@ class EfficientNet2(torch.nn.Module):
         x = self.feature(x)
         return self.fc(x.mean((2, 3)))
         #return x
+        
+        ###Other methods for ESCCPro biomarker building
+        #x_1 = self.bottom_up_att(x)
+        #x_2 = self.top_down_att(x)
+        #x_final = x_1 * x_2
+        #return x_final
+        
+        ##return self.net_linear(x.mean((2, 3)))
 
     def export(self):
         for m in self.modules():
