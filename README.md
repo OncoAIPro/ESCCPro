@@ -29,3 +29,6 @@ ESCCPro predicts surgical and postoperative adjuvant chemotherapy outcomes for p
 <div align=left><img width="1000" height="370" src="https://github.com/OncoAIPro/ESCCPro/blob/main/utils/Seg_Examples.jpg"/></div><br />
 
 **Fig. S1. Examples of the input PET/CT images of ESCCPro. R1, R2, and R3 represent the manual segmentation from three radiologists.**<br />
+
+*Cite this study*: <br />
+>  PET/CT deep learning prognosis for treatment decision support in esophageal squamous cell carcinoma. Insights Into Imaging, 2024. DOI: 10.1186/s13244-024-01737-1
